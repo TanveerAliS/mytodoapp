@@ -54,9 +54,6 @@ export async function updateStatus(formData: FormData) {
 
   // Trigger a revalidation of the specified path (in this case, the root '/')
   revalidatePath('/');
-
-  // Return the updated completion status
-  return updateStatus;
 }
 
 /**

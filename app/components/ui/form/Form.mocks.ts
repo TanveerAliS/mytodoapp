@@ -1,10 +1,9 @@
 import { IForm } from './Form';
 
-const mockAction = async (formData: FormData): Promise<void | boolean> => {
+const mockAction = async (formData: FormData): Promise<void> => {
   // Simulate form submission logic here
   console.log('Form submitted with data:', formData);
-  // Return a Promise with the desired response or boolean value
-  return true;
+  // No need to return a specific value, so return void
 };
 
 const mockOnSubmit = (): void => {
@@ -15,7 +14,7 @@ const mockOnSubmit = (): void => {
 const mockClassName = 'custom-form-class';
 
 const base: IForm = {
-  children: '{{component}}',
+  children: null, // Use React.ReactNode or JSX.Element for the actual component
   action: mockAction,
   className: mockClassName,
   onSubmit: mockOnSubmit,

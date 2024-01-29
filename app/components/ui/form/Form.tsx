@@ -10,7 +10,7 @@ import { FormEvent, ReactNode, useRef } from 'react';
  * @property {string} [className] - Additional class names for styling.
  * @property {Function} [onSubmit] - The function to be executed when the form is submitted.
  */
-interface IForm {
+export interface IForm {
   children: ReactNode;
   action: (formData: FormData) => void | Promise<void>;
   className?: string;
